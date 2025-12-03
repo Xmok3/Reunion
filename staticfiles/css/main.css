@@ -1,0 +1,66 @@
+body, html {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.equal-image {
+    width: 300px;
+    height: 300px; 
+    object-fit: cover; 
+}
+
+#clickToRsvp {
+    position: fixed;
+    bottom: 20px;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+    opacity: 1;
+}
+
+#clickToRsvp.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#rsvpForm {
+    display: none; 
+}
+.reg-section {
+    width: 450px;
+}
+
+#banner {
+     background: linear-gradient(rgba(15, 23, 43, .6), rgba(15, 23, 43, .7)), url(../img/banner.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}
+.hero-header {
+    background: url(../img/dom.png);
+    /* background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/bg.jpg); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+
+.iti { width: 100%; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media (min-width: 312px) and (max-width: 600px) {
+    .eventcontainer { height: 100%; }
+    .hero-header { height: 500px; }
+}

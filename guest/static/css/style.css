@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #fdd835, #ff5722);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #d32f2f;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background: #fff;
+    color: #d32f2f;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.tab.active {
+    background: #4caf50;
+    color: #fff;
+}
+
+.locations {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.locations .icon {
+    margin-right: 5px;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form input,
+.registration-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row input,
+.row select {
+    flex: 1;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.checkbox a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background: #f88502;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background: #e68900;
+}

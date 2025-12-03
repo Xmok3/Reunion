@@ -3,7 +3,7 @@ services:
     name: registration-app
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn registration.wsgi:application"
+    startCommand: "gunicorn core.wsgi:application"
     envVars:
       - key: 'django-insecure-3!k*_bhxv5=1wu*@24z01$at6jjvep)j_k92y$mc$z+@(n_rgr'
         generateValue: true

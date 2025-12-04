@@ -61,7 +61,7 @@ def register(request):
         
         # --- SEND EMAIL WITH QR ---
 
-        subject = "Your Event QR Code"
+        subject = "Class of 2016 Homecoming Registration Confirmation"
 
         message = f"""
         Hello {guest.full_name},
@@ -72,7 +72,7 @@ def register(request):
         Please keep it safe as it will be required for check-in.
 
         Regards,
-        XMOK3 Developments
+        Reunion Committee
         """
 
         email = EmailMessage(

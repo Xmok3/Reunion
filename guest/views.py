@@ -10,6 +10,10 @@ from io import BytesIO, StringIO
 from django.core.files.base import ContentFile
 from django.shortcuts import render, redirect
 from .models import Guest
+from django.core.mail import EmailMessage
+from django.conf import settings
+from io import BytesIO
+
 try:
     import openpyxl
     from openpyxl.styles import Font, PatternFill, Alignment
@@ -54,6 +58,33 @@ def register(request):
         buffer = BytesIO()
         logo.save(buffer, format="PNG")
         guest.qr_image.save(f"{guest.qr_code_value}.png", ContentFile(buffer.getvalue()))
+        
+        # --- SEND EMAIL WITH QR ---
+
+        subject = "Your Event QR Code"
+
+        message = f"""
+        Hello {guest.full_name},
+
+        Thank you for registering.
+
+        Your QR code is attached to this email.
+        Please keep it safe as it will be required for check-in.
+
+        Regards,
+        XMOK3 Developments
+        """
+
+        email = EmailMessage(
+        subject,
+        message,
+        settings.EMAIL_HOST_USER,
+        [guest.email]
+        )
+
+        email.attach_file(guest.qr_image.path)
+        email.send()
+
 
         return redirect("success", code=guest.qr_code_value)
 
